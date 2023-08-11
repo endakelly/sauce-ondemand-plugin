@@ -13,7 +13,7 @@
         <gitHubRepo>endakelly/${project.artifactId}-plugin</gitHubRepo>
         <!-- Baseline Jenkins version you use to build the plugin. Users must have this version or newer to run. -->
         <jenkins.version>2.249.1</jenkins.version>
-        <ci-sauce.version>1.162</ci-sauce.version>
+        <ci-sauce.version>v0.0.2</ci-sauce.version>
         <saucerest.version>2.0.3</saucerest.version>
     </properties>
 
@@ -120,10 +120,9 @@
             <version>1.5.0</version>
         </dependency>
         <dependency>
-            <groupId>com.saucelabs</groupId>
+            <groupId>com.github.endakelly</groupId>
             <artifactId>ci-sauce</artifactId>
             <version>${ci-sauce.version}</version>
-            <url>https://github.com/endakelly/ci-sauce/releases/tag/v0.0.1</url>
             <exclusions>
                 <!-- Provided by core -->
                 <exclusion>
@@ -301,7 +300,7 @@
         </repository>
         <repository>
             <id>local</id>
-            <url>file://Users/enda.kelly/Projects/personal/ci-sauce</url>
+            <url>https://github.com/endakelly/ci-sauce</url>
         </repository>
     </repositories>
     <pluginRepositories>
