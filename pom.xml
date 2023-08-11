@@ -10,10 +10,10 @@
     <properties>
         <revision>1.213</revision>
         <changelist>-SNAPSHOT</changelist>
-        <gitHubRepo>jenkinsci/${project.artifactId}-plugin</gitHubRepo>
+        <gitHubRepo>endakelly/${project.artifactId}-plugin</gitHubRepo>
         <!-- Baseline Jenkins version you use to build the plugin. Users must have this version or newer to run. -->
         <jenkins.version>2.249.1</jenkins.version>
-        <ci-sauce.version>1.168</ci-sauce.version>
+        <ci-sauce.version>1.162</ci-sauce.version>
         <saucerest.version>2.0.3</saucerest.version>
     </properties>
 
@@ -22,7 +22,7 @@
     <version>${revision}${changelist}</version>
     <packaging>hpi</packaging>
     <name>Jenkins Sauce OnDemand plugin</name>
-    <url>https://github.com/jenkinsci/${project.artifactId}-plugin</url>
+    <url>https://github.com/endakelly/${project.artifactId}-plugin</url>
 
     <scm>
         <connection>scm:git:https://github.com/${gitHubRepo}.git</connection>
@@ -123,7 +123,7 @@
             <groupId>com.saucelabs</groupId>
             <artifactId>ci-sauce</artifactId>
             <version>${ci-sauce.version}</version>
-            <scope>compile</scope>
+            <url>https://github.com/endakelly/ci-sauce/releases/tag/v0.0.1</url>
             <exclusions>
                 <!-- Provided by core -->
                 <exclusion>
@@ -298,6 +298,10 @@
         <repository>
             <id>repo.jenkins-ci.org</id>
             <url>https://repo.jenkins-ci.org/public/</url>
+        </repository>
+        <repository>
+            <id>local</id>
+            <url>file://Users/enda.kelly/Projects/personal/ci-sauce</url>
         </repository>
     </repositories>
     <pluginRepositories>
